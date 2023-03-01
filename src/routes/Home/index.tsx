@@ -1,8 +1,13 @@
-import { Header } from '../../components/Header'
+import { Actions } from '../../components/Actions'
+import { Cards } from '../../components/Cards'
+import { Main } from '../../components/Main'
 
 const Home = (): JSX.Element => {
   return (
-    <Header />
+    <Main>
+      <Actions />
+      <Cards />
+    </Main>
   )
 }
 
