@@ -5,6 +5,11 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    fontWeight: {
+      300: '300',
+      600: '600',
+      800: '800'
+    },
     colors: {
       'dm-dark-blue': 'hsl(209, 23%, 22%)',
       'dm-very-dark-blue': 'hsl(207, 26%, 17%)',

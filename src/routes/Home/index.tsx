@@ -1,6 +1,8 @@
+import { Header } from '../../components/Header'
+
 const Home = (): JSX.Element => {
   return (
-    <div>index</div>
+    <Header />
   )
 }
 
