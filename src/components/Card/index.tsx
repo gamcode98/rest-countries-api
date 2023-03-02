@@ -30,7 +30,8 @@ const Card = (props: Props): JSX.Element => {
 
   return (
     <div
-      className='shadow-md w-4/5 mx-auto rounded overflow-hidden bg-white mb-8'
+      className='shadow-md w-4/5 mx-auto rounded overflow-hidden bg-white
+       mb-8 cursor-pointer transition ease-in-out delay-75 hover:scale-105 will-change-transform'
       onClick={goToDetails}
     >
       <img

@@ -1,11 +1,13 @@
-import { Search } from '../Search'
-import { Select } from '../Select'
+interface Props {
+  children: JSX.Element | JSX.Element[]
+}
 
-const Actions = (): JSX.Element => {
+const Actions = (props: Props): JSX.Element => {
+  const { children } = props
+
   return (
     <div className='mx-auto w-11/12 lg:flex lg:justify-between lg:w-full lg:px-11'>
-      <Search />
-      <Select />
+      {children}
     </div>
   )
 }

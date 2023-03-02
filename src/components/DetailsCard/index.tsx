@@ -13,7 +13,7 @@ const DetailsCard = (props: Props): JSX.Element => {
       <img
         src={countryDetails.image}
         alt='flag'
-        className='mb-8 lg:w-2/5'
+        className='mb-8 lg:w-2/5 shadow-md'
       />
       <div className='lg:w-full'>
         <div className='pb-8'>
@@ -32,10 +32,11 @@ const DetailsCard = (props: Props): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className='lg:flex lg:items-center lg:gap-4'>
-          <h5 className='text-xl font-600 mb-4 lg:mb-0'>Border countries:</h5>
-          <BorderCountries borderCountries={countryDetails.borderCountries} />
-        </div>
+        {countryDetails.borderCountries !== undefined &&
+          <div className='lg:flex lg:items-center lg:gap-4'>
+            <h5 className='text-xl font-600 mb-4 lg:mb-0'>Border countries:</h5>
+            <BorderCountries borderCountries={countryDetails.borderCountries} />
+          </div>}
       </div>
     </div>
   )
