@@ -6,8 +6,6 @@ const Details = (): JSX.Element => {
   const location = useLocation()
   const { details } = location.state
 
-  console.log({ details })
-
   return (
     <div className='w-11/12 mx-auto'>
       <GoBackBtn />

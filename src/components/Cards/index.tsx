@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Card } from '../Card'
 import { Country } from '../../interfaces/country.interface'
-import { getData } from '../../services'
+import { getAllCountries } from '../../services'
 
 interface Props {
   setCountries: React.Dispatch<React.SetStateAction<Country[]>>
@@ -13,7 +13,7 @@ const Cards = (props: Props): JSX.Element => {
   const { setCountries, searchResults, setSearchResults } = props
 
   useEffect(() => {
-    getData()
+    getAllCountries()
       .then(async data => await data.json())
       .then(response => {
         setCountries(response)

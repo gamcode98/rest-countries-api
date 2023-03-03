@@ -1,18 +1,19 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Country } from '../../interfaces/country.interface'
 
 interface Props {
-  countries: Country[]
-  setSearchResults: React.Dispatch<React.SetStateAction<Country[]>>
+  countries?: Country[]
+  setSearchResults?: React.Dispatch<React.SetStateAction<Country[]>>
 }
 
 const Search = (props: Props): JSX.Element => {
   const { countries, setSearchResults } = props
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    const results = countries.filter(country => {
+    const results = countries?.filter(country => {
       return country.name.toLowerCase().includes(event.target.value.toLowerCase())
     })
-    setSearchResults(results)
+    setSearchResults?.(results!)
   }
 
   return (
