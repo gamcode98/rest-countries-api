@@ -10,6 +10,8 @@ const Home = (): JSX.Element => {
   const [countries, setCountries] = useState<Country[]>([])
   const [searchResults, setSearchResults] = useState<Country[]>([])
 
+  // console.log(countries.map())
+
   return (
     <Main>
       <Actions
