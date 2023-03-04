@@ -10,7 +10,7 @@ const GoBackBtn = (): JSX.Element => {
 
   return (
     <button
-      className='shadow-md flex items-center gap-2 py-4 px-8 mt-8 mb-16'
+      className='shadow-md flex items-center gap-2 py-4 px-8 mt-8 mb-16 transition ease-in-out delay-75 hover:scale-105 will-change-transform'
       onClick={handleGoBack}
     >
       <img src={arrowLeftIcon} alt='arrow left icon' width={20} />
