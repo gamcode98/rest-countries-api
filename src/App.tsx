@@ -8,7 +8,7 @@ function App (): JSX.Element {
     <Routes>
       <Route path='/' element={<Header />}>
         <Route index path='/' element={<Home />} />
-        <Route path='/detail' element={<Details />} />
+        <Route path='/details' element={<Details />} />
       </Route>
     </Routes>
   )

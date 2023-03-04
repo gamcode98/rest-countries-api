@@ -9,20 +9,25 @@ import { Country } from '../../interfaces/country.interface'
 const Home = (): JSX.Element => {
   const [countries, setCountries] = useState<Country[]>([])
   const [searchResults, setSearchResults] = useState<Country[]>([])
+  const [isLoading, setIsLoading] = useState<boolean>(true)
 
   return (
     <Main>
       <Actions
         countries={countries}
         setSearchResults={setSearchResults}
+        isLoading={isLoading}
       >
         <Search />
         <SelectFilter />
       </Actions>
+
       <Cards
         setCountries={setCountries}
         searchResults={searchResults}
         setSearchResults={setSearchResults}
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
       />
     </Main>
   )

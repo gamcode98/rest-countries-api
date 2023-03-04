@@ -25,12 +25,12 @@ const Card = (props: Props): JSX.Element => {
       image: country.flag
     }
 
-    navigate('/detail', { state: { details } })
+    navigate('/details', { state: { details } })
   }
 
   return (
     <div
-      className='shadow-md w-4/5 mx-auto rounded overflow-hidden bg-white
+      className='shadow-md w-4/5 mx-auto rounded overflow-hidden bg-white dark:bg-dm-dark-blue
        mb-8 cursor-pointer transition ease-in-out delay-75 hover:scale-105 will-change-transform'
       onClick={goToDetails}
     >
@@ -39,10 +39,10 @@ const Card = (props: Props): JSX.Element => {
         alt='flag'
       />
       <div className='p-8 pb-8'>
-        <h3 className='mb-4 font-800 text-2xl'>{country.name}</h3>
-        <p><span className='font-600'>Population: </span>{country.population}</p>
-        <p><span className='font-600'>Region: </span>{country.region}</p>
-        <p><span className='font-600'>Capital: </span>{country.capital}</p>
+        <h3 className='mb-4 font-800 text-2xl dark:text-lm-very-light-gray'>{country.name}</h3>
+        <p className='dark:text-lm-dark-gray'><span className='font-600 dark:text-lm-very-light-gray'>Population: </span>{country.population}</p>
+        <p className='dark:text-lm-dark-gray'><span className='font-600 dark:text-lm-very-light-gray'>Region: </span>{country.region}</p>
+        <p className='dark:text-lm-dark-gray'><span className='font-600 dark:text-lm-very-light-gray'>Capital: </span>{country.capital}</p>
       </div>
     </div>
   )

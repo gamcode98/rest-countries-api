@@ -6,7 +6,7 @@ const Main = (props: Props): JSX.Element => {
   const { children } = props
 
   return (
-    <main className='bg-lm-very-light-gray py-8'>{children}</main>
+    <main className='bg-lm-very-light-gray py-8 dark:bg-dm-very-dark-blue'>{children}</main>
   )
 }
 

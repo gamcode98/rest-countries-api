@@ -30,7 +30,7 @@ const BorderCountry = (props: Props): JSX.Element => {
   return (
     <button
       onClick={handleChangeToBorderCountry}
-      className='shadow-md py-2 px-8 transition ease-in-out delay-75 hover:scale-105 will-change-transform'
+      className='shadow-md py-2 px-8 transition ease-in-out delay-75 hover:scale-105 will-change-transform dark:text-lm-very-light-gray dark:bg-dm-dark-blue'
     >{borderCountry.name}
     </button>
   )

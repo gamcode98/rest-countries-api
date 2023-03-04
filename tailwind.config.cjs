@@ -4,6 +4,7 @@ module.exports = {
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}'
   ],
+  darkMode: 'class',
   theme: {
     fontWeight: {
       300: '300',
@@ -29,7 +30,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        search: "url('/assets/search.svg')"
+        'white-search': "url('/assets/white-search.svg')",
+        'dark-search': "url('/assets/dark-search.svg')"
       }
     }
   },

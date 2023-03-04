@@ -15,7 +15,7 @@ const Details = (): JSX.Element => {
       <DetailsCard
         countryDetails={countryDetails}
         setCountryDetails={setCountryDetails}
-      />2
+      />
     </div>
   )
 }
