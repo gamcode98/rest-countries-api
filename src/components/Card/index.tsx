@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { Country, CountryDetail } from '../../interfaces/country.interface'
+import { Country, CountryDetails } from '../../interfaces/country.interface'
 
 interface Props {
   country: Country
@@ -11,7 +11,7 @@ const Card = (props: Props): JSX.Element => {
   const navigate = useNavigate()
 
   const goToDetails = (): void => {
-    const details: CountryDetail = {
+    const details: CountryDetails = {
       name: country.name,
       nativeName: country.nativeName,
       population: country.population,

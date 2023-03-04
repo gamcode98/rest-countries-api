@@ -1,12 +1,13 @@
-import { CountryDetail } from '../../interfaces/country.interface'
+import { CountryDetails } from '../../interfaces/country.interface'
 import { BorderCountries } from '../BorderCountries'
 
 interface Props {
-  countryDetails: CountryDetail
+  countryDetails: CountryDetails
+  setCountryDetails: React.Dispatch<React.SetStateAction<CountryDetails>>
 }
 
 const DetailsCard = (props: Props): JSX.Element => {
-  const { countryDetails } = props
+  const { countryDetails, setCountryDetails } = props
 
   return (
     <div className='mb-8 lg:flex lg:justify-between lg:items-center lg:gap-24'>
@@ -35,7 +36,10 @@ const DetailsCard = (props: Props): JSX.Element => {
         {countryDetails.borderCountries !== undefined &&
           <div className='lg:flex lg:items-center lg:gap-4'>
             <h5 className='text-xl font-600 mb-4 lg:mb-0'>Border countries:</h5>
-            <BorderCountries borderCountries={countryDetails.borderCountries} />
+            <BorderCountries
+              borderCountries={countryDetails.borderCountries}
+              setCountryDetails={setCountryDetails}
+            />
           </div>}
       </div>
     </div>

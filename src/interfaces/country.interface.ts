@@ -66,7 +66,7 @@ export interface Country {
   gini?: number
 }
 
-export interface CountryDetail {
+export interface CountryDetails {
   name: string
   nativeName: string
   population: number
