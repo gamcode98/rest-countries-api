@@ -1,5 +1,5 @@
 const getAllCountries = async (): Promise<Response> => {
-  return await fetch('/src/data/data.json')
+  return await fetch('/data/data.json')
 }
 
 export { getAllCountries }
